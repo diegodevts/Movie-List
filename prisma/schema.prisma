@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id         String  @id @default(uuid())
+    name       String
+    birth      String
+    email      String  @unique()
+    password   String
+    address    String
+    number     Int
+    complement String?
+    district   String
+    city       String
+    state      String  @db.VarChar(2)
+
+    @@map("users")
+}
+
+model Title {
+    id             Int     @id @default(autoincrement())
+    tconst         String
+    titleType      String
+    primaryTitle   String
+    originalTitle  String
+    isAdult        Boolean
+    startYear      Int
+    endYear        Int
+    runtimeMinutes Int
+    genres         String
+    rating         Rating  @relation(fields: [rating_id], references: [id])
+    rating_id      String
+
+    @@map("titles")
+}
+
+model Rating {
+    id            String  @id @default(uuid())
+    tconst        String
+    averageRating Float
+    numVotes      Int
+    Title         Title[]
+
+    @@map("ratings")
+}
