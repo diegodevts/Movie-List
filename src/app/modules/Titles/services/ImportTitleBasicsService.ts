@@ -30,7 +30,6 @@ export class ImportTitleBasicsService {
 
         titlesObj.pop()
 
-        console.log(titlesObj[0])
         const titlesLoaded = await prisma.title
             .createMany({
                 data: titlesObj
