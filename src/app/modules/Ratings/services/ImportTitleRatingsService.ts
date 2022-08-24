@@ -4,16 +4,17 @@ import prisma from "../../../database/prismaClient"
 import fs from "fs"
 
 export class ImportTitleRatingsService {
-    static async import(filepath: string, filename: string) {
-        const file = fs
-            .readFileSync(`${filepath}/${filename}`, "utf8")
-            .split("\n")
+    static async import(destination: string, filename: string) {
+        const filepath = `${destination}\\${filename}`
+
+        const file = fs.readFileSync(filepath, "utf8").split("\n")
+
         file.shift()
 
         const ratings = file.map((value) => {
             return value.split("\t")
         })
-        fs.unlinkSync(`${filepath}/${filename}`)
+        fs.unlinkSync(filepath)
         const ratingsObj: Omit<Rating, "id">[] = []
 
         for (let data of ratings) {

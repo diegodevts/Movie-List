@@ -12,6 +12,7 @@ export const importRatings = async (req: Request, res: Response) => {
                 message: "You aren't allowed to get this resource.",
                 statusCode: 403
             })
+
         const ratings = await ImportTitleRatingsService.import(
             destination,
             filename

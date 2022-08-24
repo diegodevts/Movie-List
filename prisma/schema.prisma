@@ -29,26 +29,23 @@ model User {
 model Title {
     id             Int     @id @default(autoincrement())
     tconst         String
-    titleType      String
-    primaryTitle   String
-    originalTitle  String
-    isAdult        Boolean
-    startYear      Int
-    endYear        Int
-    runtimeMinutes Int
-    genres         String
-    rating         Rating  @relation(fields: [rating_id], references: [id])
-    rating_id      String
+    titleType      String?
+    primaryTitle   String?
+    originalTitle  String?
+    isAdult        String?
+    startYear      String?
+    endYear        String?
+    runtimeMinutes String?
+    genres         String?
 
     @@map("titles")
 }
 
 model Rating {
-    id            String  @id @default(uuid())
+    id            String @id @default(uuid())
     tconst        String
     averageRating Float
     numVotes      Int
-    Title         Title[]
 
     @@map("ratings")
 }
