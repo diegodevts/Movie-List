@@ -96,30 +96,136 @@ ________________________________________________________________________________
 
 O retorno é basicamente os titulos + os dados de paginação. Essa rota também é protegida.
 
-      {
-	      "message": "Movies ratings loaded!",
-	      "code": 201,
-	      "ratings": {
-		      "basics": [
-			      {
-				      "id": 1,
-				      "tconst": "tt2651706",
-				      "titleType": "short",
-				      "primaryTitle": "A fuga das galinhas",
-				      "originalTitle": "Chicken Run",
-				      "isAdult": false,
-				      "startYear": 2001,
-				      "endYear": 2001,
-				      "runtimeMinutes": 2,
-				      "genres": "Infantil,Comédia",
-				      "rating_id": "00000121-ffbb-422d-a6d2-f0b4e6aa7910"
-			      }
-		      ],
-		      "currentPage": 1,
-		      "skippedItems": 0,
-		      "numberOfPages": 1
-	      }
-      }
+       {
+	"code": 200,
+	"ratings": {
+		"basics": [
+			{
+				"id": 1,
+				"tconst": "tt0000001",
+				"titleType": "short",
+				"primaryTitle": "Carmencita",
+				"originalTitle": "Carmencita",
+				"isAdult": "0",
+				"startYear": "1894",
+				"endYear": "\\N",
+				"runtimeMinutes": "1",
+				"genres": "Documentary,Short"
+			},
+			{
+				"id": 2,
+				"tconst": "tt0000002",
+				"titleType": "short",
+				"primaryTitle": "Le clown et ses chiens",
+				"originalTitle": "Le clown et ses chiens",
+				"isAdult": "0",
+				"startYear": "1892",
+				"endYear": "\\N",
+				"runtimeMinutes": "5",
+				"genres": "Animation,Short"
+			},
+			{
+				"id": 3,
+				"tconst": "tt0000003",
+				"titleType": "short",
+				"primaryTitle": "Pauvre Pierrot",
+				"originalTitle": "Pauvre Pierrot",
+				"isAdult": "0",
+				"startYear": "1892",
+				"endYear": "\\N",
+				"runtimeMinutes": "4",
+				"genres": "Animation,Comedy,Romance"
+			},
+			{
+				"id": 4,
+				"tconst": "tt0000004",
+				"titleType": "short",
+				"primaryTitle": "Un bon bock",
+				"originalTitle": "Un bon bock",
+				"isAdult": "0",
+				"startYear": "1892",
+				"endYear": "\\N",
+				"runtimeMinutes": "12",
+				"genres": "Animation,Short"
+			},
+			{
+				"id": 5,
+				"tconst": "tt0000005",
+				"titleType": "short",
+				"primaryTitle": "Blacksmith Scene",
+				"originalTitle": "Blacksmith Scene",
+				"isAdult": "0",
+				"startYear": "1893",
+				"endYear": "\\N",
+				"runtimeMinutes": "1",
+				"genres": "Comedy,Short"
+			},
+			{
+				"id": 6,
+				"tconst": "tt0000006",
+				"titleType": "short",
+				"primaryTitle": "Chinese Opium Den",
+				"originalTitle": "Chinese Opium Den",
+				"isAdult": "0",
+				"startYear": "1894",
+				"endYear": "\\N",
+				"runtimeMinutes": "1",
+				"genres": "Short"
+			},
+			{
+				"id": 7,
+				"tconst": "tt0000007",
+				"titleType": "short",
+				"primaryTitle": "Corbett and Courtney Before the Kinetograph",
+				"originalTitle": "Corbett and Courtney Before the Kinetograph",
+				"isAdult": "0",
+				"startYear": "1894",
+				"endYear": "\\N",
+				"runtimeMinutes": "1",
+				"genres": "Short,Sport"
+			},
+			{
+				"id": 8,
+				"tconst": "tt0000008",
+				"titleType": "short",
+				"primaryTitle": "Edison Kinetoscopic Record of a Sneeze",
+				"originalTitle": "Edison Kinetoscopic Record of a Sneeze",
+				"isAdult": "0",
+				"startYear": "1894",
+				"endYear": "\\N",
+				"runtimeMinutes": "1",
+				"genres": "Documentary,Short"
+			},
+			{
+				"id": 9,
+				"tconst": "tt0000009",
+				"titleType": "movie",
+				"primaryTitle": "Miss Jerry",
+				"originalTitle": "Miss Jerry",
+				"isAdult": "0",
+				"startYear": "1894",
+				"endYear": "\\N",
+				"runtimeMinutes": "45",
+				"genres": "Romance"
+			},
+			{
+				"id": 10,
+				"tconst": "tt0000010",
+				"titleType": "short",
+				"primaryTitle": "Leaving the Factory",
+				"originalTitle": "La sortie de l'usine Lumière à Lyon",
+				"isAdult": "0",
+				"startYear": "1895",
+				"endYear": "\\N",
+				"runtimeMinutes": "1",
+				"genres": "Documentary,Short"
+			}
+		],
+		"currentPage": 1,
+		"skippedItems": 0,
+		"numberOfPages": 4088
+	  }
+}
 
 ______________________________________________________________________________________________________________________________________________________________________
 # Listagem de um título: [GET]: /titles/:id
@@ -128,23 +234,22 @@ O retorno é basicamente o título. Essa rota também é protegida.
 
 
       {
-	      "code": 200,
-	      "ratings": {
-		      "basic": {
-			      "id": 1,
-			      "tconst": "tt2651706",
-			      "titleType": "short",
-			      "primaryTitle": "A Fuga Das Galinhas",
-			      "originalTitle": "Chicken Run",
-			      "isAdult": false,
-			      "startYear": 2001,
-			      "endYear": 2001,
-			      "runtimeMinutes": 2,
-			      "genres": "Infantil,Comédia",
-			      "rating_id": "00000121-ffbb-422d-a6d2-f0b4e6aa7910"
-		      }
-	      }
-      }
+	    "code": 200,
+	    "ratings": {
+		"basic": {
+			"id": 1,
+			"tconst": "tt0000001",
+			"titleType": "short",
+			"primaryTitle": "Carmencita",
+			"originalTitle": "Carmencita",
+			"isAdult": "0",
+			"startYear": "1894",
+			"endYear": "\\N",
+			"runtimeMinutes": "1",
+			"genres": "Documentary,Short"
+		}
+	}
+}
 
 ______________________________________________________________________________________________________________________________________________________________________
 
@@ -153,28 +258,27 @@ ________________________________________________________________________________
 Essa rota é protegida. É necessário passar o id do filme que você quer atualizar, e no corpo um json contendo a chave que será atualizada, e o novo valor, como no exemplo:
 
                            {
-	                            "primaryTitle": "A Fuga Das Galinhas"
+	                            "primaryTitle": "CARMENCITA"
                            }
 
 O retorno é:
 
-      {
-	      "message": "Movie updated!",
-	      "code": 200,
-	      "title": {
-		      "id": 1,
-		      "tconst": "tt2651706",
-		      "titleType": "short",
-		      "primaryTitle": "A Fuga Das Galinhas",
-		      "originalTitle": "Chicken Run",
-		      "isAdult": false,
-		      "startYear": 2001,
-		      "endYear": 2001,
-		      "runtimeMinutes": 2,
-		      "genres": "Infantil,Comédia",
-		      "rating_id": "00000121-ffbb-422d-a6d2-f0b4e6aa7910"
-	      }
-      }
+     {
+	"message": "Movie updated!",
+	"code": 200,
+	"title": {
+		"id": 1,
+		"tconst": "tt0000001",
+		"titleType": "short",
+		"primaryTitle": "CARMENCITA",
+		"originalTitle": "Carmencita",
+		"isAdult": "0",
+		"startYear": "1894",
+		"endYear": "\\N",
+		"runtimeMinutes": "1",
+		"genres": "Documentary,Short"
+	}
+}
       
 ______________________________________________________________________________________________________________________________________________________________________
   
